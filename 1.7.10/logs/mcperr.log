@@ -1,0 +1,636 @@
+00:25:53 - !! Missing client jar file. Aborting !!
+00:25:53 - !! Missing server jar file. Aborting !!
+00:29:18 - !! Missing client jar file. Aborting !!
+00:30:34 - '"scalac.bat" -encoding UTF-8 -deprecation -target:jvm-1.6 -classpath "lib;lib\*;jars\minecraft_server.jar" -sourcepath src\minecraft_server -d bin\minecraft_server src\minecraft_server\net\minecraft\block\*.java src\minecraft_server\net\minecraft\block\material\*.java src\minecraft_server\net\minecraft\command\*.java src\minecraft_server\net\minecraft\command\server\*.java src\minecraft_server\net\minecraft\crash\*.java src\minecraft_server\net\minecraft\creativetab\*.java src\minecraft_server\net\minecraft\dispenser\*.java src\minecraft_server\net\minecraft\enchantment\*.java src\minecraft_server\net\minecraft\entity\*.java src\minecraft_server\net\minecraft\entity\ai\*.java src\minecraft_server\net\minecraft\entity\ai\attributes\*.java src\minecraft_server\net\minecraft\entity\boss\*.java src\minecraft_server\net\minecraft\entity\effect\*.java src\minecraft_server\net\minecraft\entity\item\*.java src\minecraft_server\net\minecraft\entity\monster\*.java src\minecraft_server\net\minecraft\entity\passive\*.java src\minecraft_server\net\minecraft\entity\player\*.java src\minecraft_server\net\minecraft\entity\projectile\*.java src\minecraft_server\net\minecraft\event\*.java src\minecraft_server\net\minecraft\init\*.java src\minecraft_server\net\minecraft\inventory\*.java src\minecraft_server\net\minecraft\item\*.java src\minecraft_server\net\minecraft\item\crafting\*.java src\minecraft_server\net\minecraft\nbt\*.java src\minecraft_server\net\minecraft\network\*.java src\minecraft_server\net\minecraft\network\handshake\*.java src\minecraft_server\net\minecraft\network\handshake\client\*.java src\minecraft_server\net\minecraft\network\login\*.java src\minecraft_server\net\minecraft\network\login\client\*.java src\minecraft_server\net\minecraft\network\login\server\*.java src\minecraft_server\net\minecraft\network\play\*.java src\minecraft_server\net\minecraft\network\play\client\*.java src\minecraft_server\net\minecraft\network\play\server\*.java src\minecraft_server\net\minecraft\network\rcon\*.java src\minecraft_server\net\minecraft\network\status\*.java src\minecraft_server\net\minecraft\network\status\client\*.java src\minecraft_server\net\minecraft\network\status\server\*.java src\minecraft_server\net\minecraft\pathfinding\*.java src\minecraft_server\net\minecraft\potion\*.java src\minecraft_server\net\minecraft\profiler\*.java src\minecraft_server\net\minecraft\scoreboard\*.java src\minecraft_server\net\minecraft\server\*.java src\minecraft_server\net\minecraft\server\dedicated\*.java src\minecraft_server\net\minecraft\server\gui\*.java src\minecraft_server\net\minecraft\server\management\*.java src\minecraft_server\net\minecraft\server\network\*.java src\minecraft_server\net\minecraft\stats\*.java src\minecraft_server\net\minecraft\tileentity\*.java src\minecraft_server\net\minecraft\util\*.java src\minecraft_server\net\minecraft\village\*.java src\minecraft_server\net\minecraft\world\*.java src\minecraft_server\net\minecraft\world\biome\*.java src\minecraft_server\net\minecraft\world\chunk\*.java src\minecraft_server\net\minecraft\world\chunk\storage\*.java src\minecraft_server\net\minecraft\world\demo\*.java src\minecraft_server\net\minecraft\world\gen\*.java src\minecraft_server\net\minecraft\world\gen\feature\*.java src\minecraft_server\net\minecraft\world\gen\layer\*.java src\minecraft_server\net\minecraft\world\gen\structure\*.java src\minecraft_server\net\minecraft\world\storage\*.java' failed : 1
+00:30:34 - 
+00:30:34 - == ERRORS FOUND in SCALA CODE ==
+00:30:34 - 
+00:30:34 -  === Your scala version is out of date, update to at least 2.10.0 ===
+00:30:34 - bad option '-target:jvm-1.6' was ignored
+00:30:34 - [31m[31m-- Error: src\minecraft_server\net\minecraft\command\CommandBase.java:17:22 ----[0m[0m
+00:30:34 - [31m17 |[0mpublic [33mabstract[0m [33mclass[0m CommandBase implements ICommand
+00:30:34 - [31m[31m   |[0m                      ^[0m
+00:30:34 - 
+00:30:34 - [31m   |[0mbad parameter reference CommandBase.this.T at typer
+00:30:34 - [31m   |[0mthe parameter is [33mtype[0m [35mT[0m in [33mtrait[0m [35mComparable[0m but the prefix (CommandBase.this : net.minecraft.command.CommandBase)
+00:30:34 - [31m   |[0mdoes not define any corresponding arguments.
+00:30:34 - [31m   |[0midx = 0, args = ,
+00:30:34 - [31m   |[0mconstraint =  uninstantiated variables:
+00:30:34 - [31m   |[0m constrained types:
+00:30:34 - [31m   |[0m bounds:
+00:30:34 - [31m   |[0m ordering:
+00:30:34 - [31m   |[0m co-deps:
+00:30:34 - [31m   |[0m contra-deps:
+00:30:34 -   exception occurred while checkingJava src\minecraft_server\net\minecraft\command\CommandBase.java
+00:30:34 -   An unhandled exception was thrown in the compiler.
+00:30:34 -   Please file a crash report here:
+00:30:34 -   https://github.com/scala/scala3/issues/new/choose
+00:30:34 -   For non-enriched exceptions, compile with -Xno-enrich-error-messages.
+00:30:34 -      while compiling: src\minecraft_server\net\minecraft\command\CommandBase.java
+00:30:34 -         during phase: typer
+00:30:34 -                 mode: Mode(ImplicitsEnabled)
+00:30:34 -      library version: version 2.13.15
+00:30:34 -     compiler version: version 3.6.1
+00:30:34 -             settings: -classpath lib;lib\*;jars\minecraft_server.jar -d bin\minecraft_server -deprecation true -sourcepath src\minecraft_server
+00:30:34 - Exception in thread "main" dotty.tools.dotc.ast.Trees$UnAssignedTypeException: type of TypeTree is not assigned
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Tree.tpe(Trees.scala:74)
+00:30:34 - 	at dotty.tools.dotc.typer.Checking$.checkAppliedTypesIn(Checking.scala:166)
+00:30:34 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:15)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1753)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:30:34 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1760)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:30:34 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1757)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:30:34 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1665)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1667)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1766)
+00:30:34 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:30:34 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:30:34 - 	at dotty.tools.dotc.typer.JavaChecks$.check(JavaChecks.scala:25)
+00:30:34 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck$$anonfun$1(TyperPhase.scala:58)
+00:30:34 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+00:30:34 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+00:30:34 - 	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:507)
+00:30:34 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck(TyperPhase.scala:59)
+00:30:34 - 	at dotty.tools.dotc.typer.TyperPhase.$anonfun$6(TyperPhase.scala:108)
+00:30:34 - 	at scala.collection.Iterator$$anon$6.hasNext(Iterator.scala:479)
+00:30:34 - 	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+00:30:34 - 	at scala.collection.immutable.List.prependedAll(List.scala:155)
+00:30:34 - 	at scala.collection.immutable.List$.from(List.scala:685)
+00:30:34 - 	at scala.collection.immutable.List$.from(List.scala:682)
+00:30:34 - 	at scala.collection.IterableOps$WithFilter.map(Iterable.scala:900)
+00:30:34 - 	at dotty.tools.dotc.typer.TyperPhase.runOn(TyperPhase.scala:107)
+00:30:34 - 	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:343)
+00:30:34 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+00:30:34 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+00:30:34 - 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+00:30:34 - 	at dotty.tools.dotc.Run.runPhases$1(Run.scala:336)
+00:30:34 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:384)
+00:30:34 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:396)
+00:30:34 - 	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:69)
+00:30:34 - 	at dotty.tools.dotc.Run.compileUnits(Run.scala:396)
+00:30:34 - 	at dotty.tools.dotc.Run.compileSources(Run.scala:282)
+00:30:34 - 	at dotty.tools.dotc.Run.compile(Run.scala:267)
+00:30:34 - 	at dotty.tools.dotc.Driver.doCompile(Driver.scala:37)
+00:30:34 - 	at dotty.tools.dotc.Driver.process(Driver.scala:201)
+00:30:34 - 	at dotty.tools.dotc.Driver.process(Driver.scala:169)
+00:30:34 - 	at dotty.tools.dotc.Driver.process(Driver.scala:181)
+00:30:34 - 	at dotty.tools.dotc.Driver.main(Driver.scala:211)
+00:30:34 - 	at dotty.tools.MainGenericCompiler$.run$1(MainGenericCompiler.scala:162)
+00:30:34 - 	at dotty.tools.MainGenericCompiler$.main(MainGenericCompiler.scala:186)
+00:30:34 - 	at dotty.tools.MainGenericCompiler.main(MainGenericCompiler.scala)
+00:30:34 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+00:30:34 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+00:30:34 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+00:30:34 - 	at java.lang.reflect.Method.invoke(Method.java:498)
+00:30:34 - 	at coursier.bootstrap.launcher.a.a(Unknown Source)
+00:30:34 - 	at coursier.bootstrap.launcher.Launcher.main(Unknown Source)
+00:30:34 - ================================
+00:30:34 - 
+00:30:34 - Initial server recompile failed, correct source then run updatemd5
+00:30:44 - !! jars\versions\1.7.10\1.7.10-natives not found !!
+00:30:44 - !! Libraries check FAILED. Make sure to copy the entire .minecraft/libraries folder into jars !!
+00:33:55 - !! server already decompiled. Run cleanup before decompiling again !!
+00:34:02 - '"scalac.bat" -encoding UTF-8 -deprecation -target:jvm-1.6 -classpath "jars\versions\1.7.10\1.7.10.jar;lib;lib\*;lib;lib\*;jars\bin\minecraft.jar;jars\bin\jinput.jar;jars\bin\lwjgl.jar;jars\bin\lwjgl_util.jar;jars\libraries\com\mojang\netty\1.8.8\netty-1.8.8.jar;jars\libraries\com\mojang\realms\1.3.5\realms-1.3.5.jar;jars\libraries\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;jars\libraries\org\apache\httpcomponents\httpclient\4.3.3\httpclient-4.3.3.jar;jars\libraries\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;jars\libraries\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;jars\libraries\java3d\vecmath\1.3.1\vecmath-1.3.1.jar;jars\libraries\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;jars\libraries\com\ibm\icu\icu4j-core-mojang\51.2\icu4j-core-mojang-51.2.jar;jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;jars\libraries\io\netty\netty-all\4.0.10.Final\netty-all-4.0.10.Final.jar;jars\libraries\com\google\guava\guava\15.0\guava-15.0.jar;jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;jars\libraries\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;jars\libraries\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar;jars\libraries\com\mojang\authlib\1.5.21\authlib-1.5.21.jar;jars\libraries\org\apache\logging\log4j\log4j-api\2.0-beta9\log4j-api-2.0-beta9.jar;jars\libraries\org\apache\logging\log4j\log4j-core\2.0-beta9\log4j-core-2.0-beta9.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.1\lwjgl-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.1\lwjgl_util-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl-platform\2.9.1\lwjgl-platform-2.9.1-natives-windows.jar;jars\libraries\net\java\jinput\jinput-platform\2.0.5\jinput-platform-2.0.5-natives-windows.jar;jars\libraries\tv\twitch\twitch\5.16\twitch-5.16.jar;jars\libraries\tv\twitch\twitch-platform\5.16\twitch-platform-5.16-natives-windows-64.jar;jars\libraries\tv\twitch\twitch-external-platform\4.5\twitch-external-platform-4.5-natives-windows-64.jar" -sourcepath src\minecraft -d bin\minecraft src\minecraft\*.java src\minecraft\net\minecraft\block\*.java src\minecraft\net\minecraft\block\material\*.java src\minecraft\net\minecraft\client\*.java src\minecraft\net\minecraft\client\audio\*.java src\minecraft\net\minecraft\client\entity\*.java src\minecraft\net\minecraft\client\gui\*.java src\minecraft\net\minecraft\client\gui\achievement\*.java src\minecraft\net\minecraft\client\gui\inventory\*.java src\minecraft\net\minecraft\client\gui\stream\*.java src\minecraft\net\minecraft\client\main\*.java src\minecraft\net\minecraft\client\model\*.java src\minecraft\net\minecraft\client\multiplayer\*.java src\minecraft\net\minecraft\client\network\*.java src\minecraft\net\minecraft\client\particle\*.java src\minecraft\net\minecraft\client\renderer\*.java src\minecraft\net\minecraft\client\renderer\culling\*.java src\minecraft\net\minecraft\client\renderer\entity\*.java src\minecraft\net\minecraft\client\renderer\texture\*.java src\minecraft\net\minecraft\client\renderer\tileentity\*.java src\minecraft\net\minecraft\client\resources\*.java src\minecraft\net\minecraft\client\resources\data\*.java src\minecraft\net\minecraft\client\settings\*.java src\minecraft\net\minecraft\client\shader\*.java src\minecraft\net\minecraft\client\stream\*.java src\minecraft\net\minecraft\client\util\*.java src\minecraft\net\minecraft\command\*.java src\minecraft\net\minecraft\command\server\*.java src\minecraft\net\minecraft\crash\*.java src\minecraft\net\minecraft\creativetab\*.java src\minecraft\net\minecraft\dispenser\*.java src\minecraft\net\minecraft\enchantment\*.java src\minecraft\net\minecraft\entity\*.java src\minecraft\net\minecraft\entity\ai\*.java src\minecraft\net\minecraft\entity\ai\attributes\*.java src\minecraft\net\minecraft\entity\boss\*.java src\minecraft\net\minecraft\entity\effect\*.java src\minecraft\net\minecraft\entity\item\*.java src\minecraft\net\minecraft\entity\monster\*.java src\minecraft\net\minecraft\entity\passive\*.java src\minecraft\net\minecraft\entity\player\*.java src\minecraft\net\minecraft\entity\projectile\*.java src\minecraft\net\minecraft\event\*.java src\minecraft\net\minecraft\init\*.java src\minecraft\net\minecraft\inventory\*.java src\minecraft\net\minecraft\item\*.java src\minecraft\net\minecraft\item\crafting\*.java src\minecraft\net\minecraft\nbt\*.java src\minecraft\net\minecraft\network\*.java src\minecraft\net\minecraft\network\handshake\*.java src\minecraft\net\minecraft\network\handshake\client\*.java src\minecraft\net\minecraft\network\login\*.java src\minecraft\net\minecraft\network\login\client\*.java src\minecraft\net\minecraft\network\login\server\*.java src\minecraft\net\minecraft\network\play\*.java src\minecraft\net\minecraft\network\play\client\*.java src\minecraft\net\minecraft\network\play\server\*.java src\minecraft\net\minecraft\network\rcon\*.java src\minecraft\net\minecraft\network\status\*.java src\minecraft\net\minecraft\network\status\client\*.java src\minecraft\net\minecraft\network\status\server\*.java src\minecraft\net\minecraft\pathfinding\*.java src\minecraft\net\minecraft\potion\*.java src\minecraft\net\minecraft\profiler\*.java src\minecraft\net\minecraft\realms\*.java src\minecraft\net\minecraft\scoreboard\*.java src\minecraft\net\minecraft\server\*.java src\minecraft\net\minecraft\server\gui\*.java src\minecraft\net\minecraft\server\integrated\*.java src\minecraft\net\minecraft\server\management\*.java src\minecraft\net\minecraft\server\network\*.java src\minecraft\net\minecraft\stats\*.java src\minecraft\net\minecraft\tileentity\*.java src\minecraft\net\minecraft\util\*.java src\minecraft\net\minecraft\village\*.java src\minecraft\net\minecraft\world\*.java src\minecraft\net\minecraft\world\biome\*.java src\minecraft\net\minecraft\world\chunk\*.java src\minecraft\net\minecraft\world\chunk\storage\*.java src\minecraft\net\minecraft\world\demo\*.java src\minecraft\net\minecraft\world\gen\*.java src\minecraft\net\minecraft\world\gen\feature\*.java src\minecraft\net\minecraft\world\gen\layer\*.java src\minecraft\net\minecraft\world\gen\structure\*.java src\minecraft\net\minecraft\world\storage\*.java' failed : 1
+00:34:02 - 
+00:34:02 - == ERRORS FOUND in SCALA CODE ==
+00:34:02 - 
+00:34:02 -  === Your scala version is out of date, update to at least 2.10.0 ===
+00:34:02 - bad option '-target:jvm-1.6' was ignored
+00:34:02 - [31m[31m-- Error: src\minecraft\net\minecraft\client\renderer\EntitySorter.java:6:13 ---[0m[0m
+00:34:02 - [31m6 |[0mpublic [33mclass[0m EntitySorter implements Comparator
+00:34:02 - [31m[31m  |[0m             ^[0m
+00:34:02 - 
+00:34:02 - [31m  |[0mbad parameter reference EntitySorter.this.T at typer
+00:34:02 - [31m  |[0mthe parameter is [33mtype[0m [35mT[0m in [33mtrait[0m [35mComparator[0m but the prefix (EntitySorter.this : net.minecraft.client.renderer.EntitySorter)
+00:34:02 - [31m  |[0mdoes not define any corresponding arguments.
+00:34:02 - [31m  |[0midx = 0, args = ,
+00:34:02 - [31m  |[0mconstraint =  uninstantiated variables:
+00:34:02 - [31m  |[0m constrained types:
+00:34:02 - [31m  |[0m bounds:
+00:34:02 - [31m  |[0m ordering:
+00:34:02 - [31m  |[0m co-deps:
+00:34:02 - [31m  |[0m contra-deps:
+00:34:02 -   exception occurred while checkingJava src\minecraft\net\minecraft\client\renderer\EntitySorter.java
+00:34:02 -   An unhandled exception was thrown in the compiler.
+00:34:02 -   Please file a crash report here:
+00:34:02 -   https://github.com/scala/scala3/issues/new/choose
+00:34:02 -   For non-enriched exceptions, compile with -Xno-enrich-error-messages.
+00:34:02 -      while compiling: src\minecraft\net\minecraft\client\renderer\EntitySorter.java
+00:34:02 -         during phase: typer
+00:34:02 -                 mode: Mode(ImplicitsEnabled)
+00:34:02 -      library version: version 2.13.15
+00:34:02 -     compiler version: version 3.6.1
+00:34:02 -             settings: -classpath jars\versions\1.7.10\1.7.10.jar;lib;lib\*;lib;lib\*;jars\bin\minecraft.jar;jars\bin\jinput.jar;jars\bin\lwjgl.jar;jars\bin\lwjgl_util.jar;jars\libraries\com\mojang\netty\1.8.8\netty-1.8.8.jar;jars\libraries\com\mojang\realms\1.3.5\realms-1.3.5.jar;jars\libraries\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;jars\libraries\org\apache\httpcomponents\httpclient\4.3.3\httpclient-4.3.3.jar;jars\libraries\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;jars\libraries\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;jars\libraries\java3d\vecmath\1.3.1\vecmath-1.3.1.jar;jars\libraries\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;jars\libraries\com\ibm\icu\icu4j-core-mojang\51.2\icu4j-core-mojang-51.2.jar;jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;jars\libraries\io\netty\netty-all\4.0.10.Final\netty-all-4.0.10.Final.jar;jars\libraries\com\google\guava\guava\15.0\guava-15.0.jar;jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;jars\libraries\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;jars\libraries\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar;jars\libraries\com\mojang\authlib\1.5.21\authlib-1.5.21.jar;jars\libraries\org\apache\logging\log4j\log4j-api\2.0-beta9\log4j-api-2.0-beta9.jar;jars\libraries\org\apache\logging\log4j\log4j-core\2.0-beta9\log4j-core-2.0-beta9.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.1\lwjgl-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.1\lwjgl_util-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl-platform\2.9.1\lwjgl-platform-2.9.1-natives-windows.jar;jars\libraries\net\java\jinput\jinput-platform\2.0.5\jinput-platform-2.0.5-natives-windows.jar;jars\libraries\tv\twitch\twitch\5.16\twitch-5.16.jar;jars\libraries\tv\twitch\twitch-platform\5.16\twitch-platform-5.16-natives-windows-64.jar;jars\libraries\tv\twitch\twitch-external-platform\4.5\twitch-external-platform-4.5-natives-windows-64.jar -d bin\minecraft -deprecation true -sourcepath src\minecraft
+00:34:02 - Exception in thread "main" dotty.tools.dotc.ast.Trees$UnAssignedTypeException: type of TypeTree is not assigned
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Tree.tpe(Trees.scala:74)
+00:34:02 - 	at dotty.tools.dotc.typer.Checking$.checkAppliedTypesIn(Checking.scala:166)
+00:34:02 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:15)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1753)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:34:02 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1760)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:34:02 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1757)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:34:02 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1665)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1667)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1766)
+00:34:02 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+00:34:02 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+00:34:02 - 	at dotty.tools.dotc.typer.JavaChecks$.check(JavaChecks.scala:25)
+00:34:02 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck$$anonfun$1(TyperPhase.scala:58)
+00:34:02 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+00:34:02 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+00:34:02 - 	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:507)
+00:34:02 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck(TyperPhase.scala:59)
+00:34:02 - 	at dotty.tools.dotc.typer.TyperPhase.$anonfun$6(TyperPhase.scala:108)
+00:34:02 - 	at scala.collection.Iterator$$anon$6.hasNext(Iterator.scala:479)
+00:34:02 - 	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+00:34:02 - 	at scala.collection.immutable.List.prependedAll(List.scala:155)
+00:34:02 - 	at scala.collection.immutable.List$.from(List.scala:685)
+00:34:02 - 	at scala.collection.immutable.List$.from(List.scala:682)
+00:34:02 - 	at scala.collection.IterableOps$WithFilter.map(Iterable.scala:900)
+00:34:02 - 	at dotty.tools.dotc.typer.TyperPhase.runOn(TyperPhase.scala:107)
+00:34:02 - 	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:343)
+00:34:02 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+00:34:02 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+00:34:02 - 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+00:34:02 - 	at dotty.tools.dotc.Run.runPhases$1(Run.scala:336)
+00:34:02 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:384)
+00:34:02 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:396)
+00:34:02 - 	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:69)
+00:34:02 - 	at dotty.tools.dotc.Run.compileUnits(Run.scala:396)
+00:34:02 - 	at dotty.tools.dotc.Run.compileSources(Run.scala:282)
+00:34:02 - 	at dotty.tools.dotc.Run.compile(Run.scala:267)
+00:34:02 - 	at dotty.tools.dotc.Driver.doCompile(Driver.scala:37)
+00:34:02 - 	at dotty.tools.dotc.Driver.process(Driver.scala:201)
+00:34:02 - 	at dotty.tools.dotc.Driver.process(Driver.scala:169)
+00:34:02 - 	at dotty.tools.dotc.Driver.process(Driver.scala:181)
+00:34:02 - 	at dotty.tools.dotc.Driver.main(Driver.scala:211)
+00:34:02 - 	at dotty.tools.MainGenericCompiler$.run$1(MainGenericCompiler.scala:162)
+00:34:02 - 	at dotty.tools.MainGenericCompiler$.main(MainGenericCompiler.scala:186)
+00:34:02 - 	at dotty.tools.MainGenericCompiler.main(MainGenericCompiler.scala)
+00:34:02 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+00:34:02 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+00:34:02 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+00:34:02 - 	at java.lang.reflect.Method.invoke(Method.java:498)
+00:34:02 - 	at coursier.bootstrap.launcher.a.a(Unknown Source)
+00:34:02 - 	at coursier.bootstrap.launcher.Launcher.main(Unknown Source)
+00:34:02 - ================================
+00:34:02 - 
+00:34:02 - Initial client recompile failed, correct source then run updatemd5
+01:02:32 - !! Can not find client bins !!
+01:04:05 - '"scalac.bat" -encoding UTF-8 -deprecation -target:jvm-1.6 -classpath "jars\versions\1.7.10\1.7.10.jar;lib;lib\*;lib;lib\*;jars\bin\minecraft.jar;jars\bin\jinput.jar;jars\bin\lwjgl.jar;jars\bin\lwjgl_util.jar;jars\libraries\com\mojang\netty\1.8.8\netty-1.8.8.jar;jars\libraries\com\mojang\realms\1.3.5\realms-1.3.5.jar;jars\libraries\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;jars\libraries\org\apache\httpcomponents\httpclient\4.3.3\httpclient-4.3.3.jar;jars\libraries\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;jars\libraries\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;jars\libraries\java3d\vecmath\1.3.1\vecmath-1.3.1.jar;jars\libraries\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;jars\libraries\com\ibm\icu\icu4j-core-mojang\51.2\icu4j-core-mojang-51.2.jar;jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;jars\libraries\io\netty\netty-all\4.0.10.Final\netty-all-4.0.10.Final.jar;jars\libraries\com\google\guava\guava\15.0\guava-15.0.jar;jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;jars\libraries\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;jars\libraries\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar;jars\libraries\com\mojang\authlib\1.5.21\authlib-1.5.21.jar;jars\libraries\org\apache\logging\log4j\log4j-api\2.0-beta9\log4j-api-2.0-beta9.jar;jars\libraries\org\apache\logging\log4j\log4j-core\2.0-beta9\log4j-core-2.0-beta9.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.1\lwjgl-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.1\lwjgl_util-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl-platform\2.9.1\lwjgl-platform-2.9.1-natives-windows.jar;jars\libraries\net\java\jinput\jinput-platform\2.0.5\jinput-platform-2.0.5-natives-windows.jar;jars\libraries\tv\twitch\twitch\5.16\twitch-5.16.jar;jars\libraries\tv\twitch\twitch-platform\5.16\twitch-platform-5.16-natives-windows-64.jar;jars\libraries\tv\twitch\twitch-external-platform\4.5\twitch-external-platform-4.5-natives-windows-64.jar" -sourcepath src\minecraft -d bin\minecraft src\minecraft\*.java src\minecraft\net\minecraft\block\*.java src\minecraft\net\minecraft\block\material\*.java src\minecraft\net\minecraft\client\*.java src\minecraft\net\minecraft\client\audio\*.java src\minecraft\net\minecraft\client\entity\*.java src\minecraft\net\minecraft\client\gui\*.java src\minecraft\net\minecraft\client\gui\achievement\*.java src\minecraft\net\minecraft\client\gui\inventory\*.java src\minecraft\net\minecraft\client\gui\stream\*.java src\minecraft\net\minecraft\client\main\*.java src\minecraft\net\minecraft\client\model\*.java src\minecraft\net\minecraft\client\multiplayer\*.java src\minecraft\net\minecraft\client\network\*.java src\minecraft\net\minecraft\client\particle\*.java src\minecraft\net\minecraft\client\renderer\*.java src\minecraft\net\minecraft\client\renderer\culling\*.java src\minecraft\net\minecraft\client\renderer\entity\*.java src\minecraft\net\minecraft\client\renderer\texture\*.java src\minecraft\net\minecraft\client\renderer\tileentity\*.java src\minecraft\net\minecraft\client\resources\*.java src\minecraft\net\minecraft\client\resources\data\*.java src\minecraft\net\minecraft\client\settings\*.java src\minecraft\net\minecraft\client\shader\*.java src\minecraft\net\minecraft\client\stream\*.java src\minecraft\net\minecraft\client\util\*.java src\minecraft\net\minecraft\command\*.java src\minecraft\net\minecraft\command\server\*.java src\minecraft\net\minecraft\crash\*.java src\minecraft\net\minecraft\creativetab\*.java src\minecraft\net\minecraft\dispenser\*.java src\minecraft\net\minecraft\enchantment\*.java src\minecraft\net\minecraft\entity\*.java src\minecraft\net\minecraft\entity\ai\*.java src\minecraft\net\minecraft\entity\ai\attributes\*.java src\minecraft\net\minecraft\entity\boss\*.java src\minecraft\net\minecraft\entity\effect\*.java src\minecraft\net\minecraft\entity\item\*.java src\minecraft\net\minecraft\entity\monster\*.java src\minecraft\net\minecraft\entity\passive\*.java src\minecraft\net\minecraft\entity\player\*.java src\minecraft\net\minecraft\entity\projectile\*.java src\minecraft\net\minecraft\event\*.java src\minecraft\net\minecraft\init\*.java src\minecraft\net\minecraft\inventory\*.java src\minecraft\net\minecraft\item\*.java src\minecraft\net\minecraft\item\crafting\*.java src\minecraft\net\minecraft\nbt\*.java src\minecraft\net\minecraft\network\*.java src\minecraft\net\minecraft\network\handshake\*.java src\minecraft\net\minecraft\network\handshake\client\*.java src\minecraft\net\minecraft\network\login\*.java src\minecraft\net\minecraft\network\login\client\*.java src\minecraft\net\minecraft\network\login\server\*.java src\minecraft\net\minecraft\network\play\*.java src\minecraft\net\minecraft\network\play\client\*.java src\minecraft\net\minecraft\network\play\server\*.java src\minecraft\net\minecraft\network\rcon\*.java src\minecraft\net\minecraft\network\status\*.java src\minecraft\net\minecraft\network\status\client\*.java src\minecraft\net\minecraft\network\status\server\*.java src\minecraft\net\minecraft\pathfinding\*.java src\minecraft\net\minecraft\potion\*.java src\minecraft\net\minecraft\profiler\*.java src\minecraft\net\minecraft\realms\*.java src\minecraft\net\minecraft\scoreboard\*.java src\minecraft\net\minecraft\server\*.java src\minecraft\net\minecraft\server\gui\*.java src\minecraft\net\minecraft\server\integrated\*.java src\minecraft\net\minecraft\server\management\*.java src\minecraft\net\minecraft\server\network\*.java src\minecraft\net\minecraft\stats\*.java src\minecraft\net\minecraft\tileentity\*.java src\minecraft\net\minecraft\util\*.java src\minecraft\net\minecraft\village\*.java src\minecraft\net\minecraft\world\*.java src\minecraft\net\minecraft\world\biome\*.java src\minecraft\net\minecraft\world\chunk\*.java src\minecraft\net\minecraft\world\chunk\storage\*.java src\minecraft\net\minecraft\world\demo\*.java src\minecraft\net\minecraft\world\gen\*.java src\minecraft\net\minecraft\world\gen\feature\*.java src\minecraft\net\minecraft\world\gen\layer\*.java src\minecraft\net\minecraft\world\gen\structure\*.java src\minecraft\net\minecraft\world\storage\*.java' failed : 1
+01:04:05 - 
+01:04:05 - == ERRORS FOUND in SCALA CODE ==
+01:04:05 - 
+01:04:05 -  === Your scala version is out of date, update to at least 2.10.0 ===
+01:04:05 - bad option '-target:jvm-1.6' was ignored
+01:04:05 - [31m[31m-- Error: src\minecraft\net\minecraft\client\renderer\EntitySorter.java:6:13 ---[0m[0m
+01:04:05 - [31m6 |[0mpublic [33mclass[0m EntitySorter implements Comparator
+01:04:05 - [31m[31m  |[0m             ^[0m
+01:04:05 - 
+01:04:05 - [31m  |[0mbad parameter reference EntitySorter.this.T at typer
+01:04:05 - [31m  |[0mthe parameter is [33mtype[0m [35mT[0m in [33mtrait[0m [35mComparator[0m but the prefix (EntitySorter.this : net.minecraft.client.renderer.EntitySorter)
+01:04:05 - [31m  |[0mdoes not define any corresponding arguments.
+01:04:05 - [31m  |[0midx = 0, args = ,
+01:04:05 - [31m  |[0mconstraint =  uninstantiated variables:
+01:04:05 - [31m  |[0m constrained types:
+01:04:05 - [31m  |[0m bounds:
+01:04:05 - [31m  |[0m ordering:
+01:04:05 - [31m  |[0m co-deps:
+01:04:05 - [31m  |[0m contra-deps:
+01:04:05 -   exception occurred while checkingJava src\minecraft\net\minecraft\client\renderer\EntitySorter.java
+01:04:05 -   An unhandled exception was thrown in the compiler.
+01:04:05 -   Please file a crash report here:
+01:04:05 -   https://github.com/scala/scala3/issues/new/choose
+01:04:05 -   For non-enriched exceptions, compile with -Xno-enrich-error-messages.
+01:04:05 -      while compiling: src\minecraft\net\minecraft\client\renderer\EntitySorter.java
+01:04:05 -         during phase: typer
+01:04:05 -                 mode: Mode(ImplicitsEnabled)
+01:04:05 -      library version: version 2.13.15
+01:04:05 -     compiler version: version 3.6.1
+01:04:05 -             settings: -classpath jars\versions\1.7.10\1.7.10.jar;lib;lib\*;lib;lib\*;jars\bin\minecraft.jar;jars\bin\jinput.jar;jars\bin\lwjgl.jar;jars\bin\lwjgl_util.jar;jars\libraries\com\mojang\netty\1.8.8\netty-1.8.8.jar;jars\libraries\com\mojang\realms\1.3.5\realms-1.3.5.jar;jars\libraries\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;jars\libraries\org\apache\httpcomponents\httpclient\4.3.3\httpclient-4.3.3.jar;jars\libraries\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;jars\libraries\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;jars\libraries\java3d\vecmath\1.3.1\vecmath-1.3.1.jar;jars\libraries\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;jars\libraries\com\ibm\icu\icu4j-core-mojang\51.2\icu4j-core-mojang-51.2.jar;jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;jars\libraries\io\netty\netty-all\4.0.10.Final\netty-all-4.0.10.Final.jar;jars\libraries\com\google\guava\guava\15.0\guava-15.0.jar;jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;jars\libraries\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;jars\libraries\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar;jars\libraries\com\mojang\authlib\1.5.21\authlib-1.5.21.jar;jars\libraries\org\apache\logging\log4j\log4j-api\2.0-beta9\log4j-api-2.0-beta9.jar;jars\libraries\org\apache\logging\log4j\log4j-core\2.0-beta9\log4j-core-2.0-beta9.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.1\lwjgl-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.1\lwjgl_util-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl-platform\2.9.1\lwjgl-platform-2.9.1-natives-windows.jar;jars\libraries\net\java\jinput\jinput-platform\2.0.5\jinput-platform-2.0.5-natives-windows.jar;jars\libraries\tv\twitch\twitch\5.16\twitch-5.16.jar;jars\libraries\tv\twitch\twitch-platform\5.16\twitch-platform-5.16-natives-windows-64.jar;jars\libraries\tv\twitch\twitch-external-platform\4.5\twitch-external-platform-4.5-natives-windows-64.jar -d bin\minecraft -deprecation true -sourcepath src\minecraft
+01:04:05 - Exception in thread "main" dotty.tools.dotc.ast.Trees$UnAssignedTypeException: type of TypeTree is not assigned
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Tree.tpe(Trees.scala:74)
+01:04:05 - 	at dotty.tools.dotc.typer.Checking$.checkAppliedTypesIn(Checking.scala:166)
+01:04:05 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:15)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1753)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:05 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1760)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:05 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1757)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:05 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1665)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1667)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1766)
+01:04:05 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:05 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:05 - 	at dotty.tools.dotc.typer.JavaChecks$.check(JavaChecks.scala:25)
+01:04:05 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck$$anonfun$1(TyperPhase.scala:58)
+01:04:05 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:05 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:05 - 	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:507)
+01:04:05 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck(TyperPhase.scala:59)
+01:04:05 - 	at dotty.tools.dotc.typer.TyperPhase.$anonfun$6(TyperPhase.scala:108)
+01:04:05 - 	at scala.collection.Iterator$$anon$6.hasNext(Iterator.scala:479)
+01:04:05 - 	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+01:04:05 - 	at scala.collection.immutable.List.prependedAll(List.scala:155)
+01:04:05 - 	at scala.collection.immutable.List$.from(List.scala:685)
+01:04:05 - 	at scala.collection.immutable.List$.from(List.scala:682)
+01:04:05 - 	at scala.collection.IterableOps$WithFilter.map(Iterable.scala:900)
+01:04:05 - 	at dotty.tools.dotc.typer.TyperPhase.runOn(TyperPhase.scala:107)
+01:04:05 - 	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:343)
+01:04:05 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:05 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:05 - 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+01:04:05 - 	at dotty.tools.dotc.Run.runPhases$1(Run.scala:336)
+01:04:05 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:384)
+01:04:05 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:396)
+01:04:05 - 	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:69)
+01:04:05 - 	at dotty.tools.dotc.Run.compileUnits(Run.scala:396)
+01:04:05 - 	at dotty.tools.dotc.Run.compileSources(Run.scala:282)
+01:04:05 - 	at dotty.tools.dotc.Run.compile(Run.scala:267)
+01:04:05 - 	at dotty.tools.dotc.Driver.doCompile(Driver.scala:37)
+01:04:05 - 	at dotty.tools.dotc.Driver.process(Driver.scala:201)
+01:04:05 - 	at dotty.tools.dotc.Driver.process(Driver.scala:169)
+01:04:05 - 	at dotty.tools.dotc.Driver.process(Driver.scala:181)
+01:04:05 - 	at dotty.tools.dotc.Driver.main(Driver.scala:211)
+01:04:05 - 	at dotty.tools.MainGenericCompiler$.run$1(MainGenericCompiler.scala:162)
+01:04:05 - 	at dotty.tools.MainGenericCompiler$.main(MainGenericCompiler.scala:186)
+01:04:05 - 	at dotty.tools.MainGenericCompiler.main(MainGenericCompiler.scala)
+01:04:05 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+01:04:05 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+01:04:05 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+01:04:05 - 	at java.lang.reflect.Method.invoke(Method.java:498)
+01:04:05 - 	at coursier.bootstrap.launcher.a.a(Unknown Source)
+01:04:05 - 	at coursier.bootstrap.launcher.Launcher.main(Unknown Source)
+01:04:05 - ================================
+01:04:05 - 
+01:04:11 - '"scalac.bat" -encoding UTF-8 -deprecation -target:jvm-1.6 -classpath "lib;lib\*;jars\minecraft_server.jar" -sourcepath src\minecraft_server -d bin\minecraft_server src\minecraft_server\net\minecraft\block\*.java src\minecraft_server\net\minecraft\block\material\*.java src\minecraft_server\net\minecraft\command\*.java src\minecraft_server\net\minecraft\command\server\*.java src\minecraft_server\net\minecraft\crash\*.java src\minecraft_server\net\minecraft\creativetab\*.java src\minecraft_server\net\minecraft\dispenser\*.java src\minecraft_server\net\minecraft\enchantment\*.java src\minecraft_server\net\minecraft\entity\*.java src\minecraft_server\net\minecraft\entity\ai\*.java src\minecraft_server\net\minecraft\entity\ai\attributes\*.java src\minecraft_server\net\minecraft\entity\boss\*.java src\minecraft_server\net\minecraft\entity\effect\*.java src\minecraft_server\net\minecraft\entity\item\*.java src\minecraft_server\net\minecraft\entity\monster\*.java src\minecraft_server\net\minecraft\entity\passive\*.java src\minecraft_server\net\minecraft\entity\player\*.java src\minecraft_server\net\minecraft\entity\projectile\*.java src\minecraft_server\net\minecraft\event\*.java src\minecraft_server\net\minecraft\init\*.java src\minecraft_server\net\minecraft\inventory\*.java src\minecraft_server\net\minecraft\item\*.java src\minecraft_server\net\minecraft\item\crafting\*.java src\minecraft_server\net\minecraft\nbt\*.java src\minecraft_server\net\minecraft\network\*.java src\minecraft_server\net\minecraft\network\handshake\*.java src\minecraft_server\net\minecraft\network\handshake\client\*.java src\minecraft_server\net\minecraft\network\login\*.java src\minecraft_server\net\minecraft\network\login\client\*.java src\minecraft_server\net\minecraft\network\login\server\*.java src\minecraft_server\net\minecraft\network\play\*.java src\minecraft_server\net\minecraft\network\play\client\*.java src\minecraft_server\net\minecraft\network\play\server\*.java src\minecraft_server\net\minecraft\network\rcon\*.java src\minecraft_server\net\minecraft\network\status\*.java src\minecraft_server\net\minecraft\network\status\client\*.java src\minecraft_server\net\minecraft\network\status\server\*.java src\minecraft_server\net\minecraft\pathfinding\*.java src\minecraft_server\net\minecraft\potion\*.java src\minecraft_server\net\minecraft\profiler\*.java src\minecraft_server\net\minecraft\scoreboard\*.java src\minecraft_server\net\minecraft\server\*.java src\minecraft_server\net\minecraft\server\dedicated\*.java src\minecraft_server\net\minecraft\server\gui\*.java src\minecraft_server\net\minecraft\server\management\*.java src\minecraft_server\net\minecraft\server\network\*.java src\minecraft_server\net\minecraft\stats\*.java src\minecraft_server\net\minecraft\tileentity\*.java src\minecraft_server\net\minecraft\util\*.java src\minecraft_server\net\minecraft\village\*.java src\minecraft_server\net\minecraft\world\*.java src\minecraft_server\net\minecraft\world\biome\*.java src\minecraft_server\net\minecraft\world\chunk\*.java src\minecraft_server\net\minecraft\world\chunk\storage\*.java src\minecraft_server\net\minecraft\world\demo\*.java src\minecraft_server\net\minecraft\world\gen\*.java src\minecraft_server\net\minecraft\world\gen\feature\*.java src\minecraft_server\net\minecraft\world\gen\layer\*.java src\minecraft_server\net\minecraft\world\gen\structure\*.java src\minecraft_server\net\minecraft\world\storage\*.java' failed : 1
+01:04:11 - 
+01:04:11 - == ERRORS FOUND in SCALA CODE ==
+01:04:11 - 
+01:04:11 -  === Your scala version is out of date, update to at least 2.10.0 ===
+01:04:11 - bad option '-target:jvm-1.6' was ignored
+01:04:11 - [31m[31m-- Error: src\minecraft_server\net\minecraft\command\CommandBase.java:17:22 ----[0m[0m
+01:04:11 - [31m17 |[0mpublic [33mabstract[0m [33mclass[0m CommandBase implements ICommand
+01:04:11 - [31m[31m   |[0m                      ^[0m
+01:04:11 - 
+01:04:11 - [31m   |[0mbad parameter reference CommandBase.this.T at typer
+01:04:11 - [31m   |[0mthe parameter is [33mtype[0m [35mT[0m in [33mtrait[0m [35mComparable[0m but the prefix (CommandBase.this : net.minecraft.command.CommandBase)
+01:04:11 - [31m   |[0mdoes not define any corresponding arguments.
+01:04:11 - [31m   |[0midx = 0, args = ,
+01:04:11 - [31m   |[0mconstraint =  uninstantiated variables:
+01:04:11 - [31m   |[0m constrained types:
+01:04:11 - [31m   |[0m bounds:
+01:04:11 - [31m   |[0m ordering:
+01:04:11 - [31m   |[0m co-deps:
+01:04:11 - [31m   |[0m contra-deps:
+01:04:11 -   exception occurred while checkingJava src\minecraft_server\net\minecraft\command\CommandBase.java
+01:04:11 -   An unhandled exception was thrown in the compiler.
+01:04:11 -   Please file a crash report here:
+01:04:11 -   https://github.com/scala/scala3/issues/new/choose
+01:04:11 -   For non-enriched exceptions, compile with -Xno-enrich-error-messages.
+01:04:11 -      while compiling: src\minecraft_server\net\minecraft\command\CommandBase.java
+01:04:11 -         during phase: typer
+01:04:11 -                 mode: Mode(ImplicitsEnabled)
+01:04:11 -      library version: version 2.13.15
+01:04:11 -     compiler version: version 3.6.1
+01:04:11 -             settings: -classpath lib;lib\*;jars\minecraft_server.jar -d bin\minecraft_server -deprecation true -sourcepath src\minecraft_server
+01:04:11 - Exception in thread "main" dotty.tools.dotc.ast.Trees$UnAssignedTypeException: type of TypeTree is not assigned
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Tree.tpe(Trees.scala:74)
+01:04:11 - 	at dotty.tools.dotc.typer.Checking$.checkAppliedTypesIn(Checking.scala:166)
+01:04:11 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:15)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1753)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:11 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1760)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:11 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1757)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:11 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1665)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1667)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1766)
+01:04:11 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:11 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:11 - 	at dotty.tools.dotc.typer.JavaChecks$.check(JavaChecks.scala:25)
+01:04:11 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck$$anonfun$1(TyperPhase.scala:58)
+01:04:11 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:11 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:11 - 	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:507)
+01:04:11 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck(TyperPhase.scala:59)
+01:04:11 - 	at dotty.tools.dotc.typer.TyperPhase.$anonfun$6(TyperPhase.scala:108)
+01:04:11 - 	at scala.collection.Iterator$$anon$6.hasNext(Iterator.scala:479)
+01:04:11 - 	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+01:04:11 - 	at scala.collection.immutable.List.prependedAll(List.scala:155)
+01:04:11 - 	at scala.collection.immutable.List$.from(List.scala:685)
+01:04:11 - 	at scala.collection.immutable.List$.from(List.scala:682)
+01:04:11 - 	at scala.collection.IterableOps$WithFilter.map(Iterable.scala:900)
+01:04:11 - 	at dotty.tools.dotc.typer.TyperPhase.runOn(TyperPhase.scala:107)
+01:04:11 - 	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:343)
+01:04:11 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:11 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:11 - 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+01:04:11 - 	at dotty.tools.dotc.Run.runPhases$1(Run.scala:336)
+01:04:11 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:384)
+01:04:11 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:396)
+01:04:11 - 	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:69)
+01:04:11 - 	at dotty.tools.dotc.Run.compileUnits(Run.scala:396)
+01:04:11 - 	at dotty.tools.dotc.Run.compileSources(Run.scala:282)
+01:04:11 - 	at dotty.tools.dotc.Run.compile(Run.scala:267)
+01:04:11 - 	at dotty.tools.dotc.Driver.doCompile(Driver.scala:37)
+01:04:11 - 	at dotty.tools.dotc.Driver.process(Driver.scala:201)
+01:04:11 - 	at dotty.tools.dotc.Driver.process(Driver.scala:169)
+01:04:11 - 	at dotty.tools.dotc.Driver.process(Driver.scala:181)
+01:04:11 - 	at dotty.tools.dotc.Driver.main(Driver.scala:211)
+01:04:11 - 	at dotty.tools.MainGenericCompiler$.run$1(MainGenericCompiler.scala:162)
+01:04:11 - 	at dotty.tools.MainGenericCompiler$.main(MainGenericCompiler.scala:186)
+01:04:11 - 	at dotty.tools.MainGenericCompiler.main(MainGenericCompiler.scala)
+01:04:11 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+01:04:11 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+01:04:11 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+01:04:11 - 	at java.lang.reflect.Method.invoke(Method.java:498)
+01:04:11 - 	at coursier.bootstrap.launcher.a.a(Unknown Source)
+01:04:11 - 	at coursier.bootstrap.launcher.Launcher.main(Unknown Source)
+01:04:11 - ================================
+01:04:11 - 
+01:04:35 - '"scalac.bat" -encoding UTF-8 -deprecation -target:jvm-1.6 -classpath "jars\versions\1.7.10\1.7.10.jar;lib;lib\*;lib;lib\*;jars\bin\minecraft.jar;jars\bin\jinput.jar;jars\bin\lwjgl.jar;jars\bin\lwjgl_util.jar;jars\libraries\com\mojang\netty\1.8.8\netty-1.8.8.jar;jars\libraries\com\mojang\realms\1.3.5\realms-1.3.5.jar;jars\libraries\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;jars\libraries\org\apache\httpcomponents\httpclient\4.3.3\httpclient-4.3.3.jar;jars\libraries\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;jars\libraries\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;jars\libraries\java3d\vecmath\1.3.1\vecmath-1.3.1.jar;jars\libraries\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;jars\libraries\com\ibm\icu\icu4j-core-mojang\51.2\icu4j-core-mojang-51.2.jar;jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;jars\libraries\io\netty\netty-all\4.0.10.Final\netty-all-4.0.10.Final.jar;jars\libraries\com\google\guava\guava\15.0\guava-15.0.jar;jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;jars\libraries\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;jars\libraries\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar;jars\libraries\com\mojang\authlib\1.5.21\authlib-1.5.21.jar;jars\libraries\org\apache\logging\log4j\log4j-api\2.0-beta9\log4j-api-2.0-beta9.jar;jars\libraries\org\apache\logging\log4j\log4j-core\2.0-beta9\log4j-core-2.0-beta9.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.1\lwjgl-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.1\lwjgl_util-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl-platform\2.9.1\lwjgl-platform-2.9.1-natives-windows.jar;jars\libraries\net\java\jinput\jinput-platform\2.0.5\jinput-platform-2.0.5-natives-windows.jar;jars\libraries\tv\twitch\twitch\5.16\twitch-5.16.jar;jars\libraries\tv\twitch\twitch-platform\5.16\twitch-platform-5.16-natives-windows-64.jar;jars\libraries\tv\twitch\twitch-external-platform\4.5\twitch-external-platform-4.5-natives-windows-64.jar" -sourcepath src\minecraft -d bin\minecraft src\minecraft\*.java src\minecraft\net\minecraft\block\*.java src\minecraft\net\minecraft\block\material\*.java src\minecraft\net\minecraft\client\*.java src\minecraft\net\minecraft\client\audio\*.java src\minecraft\net\minecraft\client\entity\*.java src\minecraft\net\minecraft\client\gui\*.java src\minecraft\net\minecraft\client\gui\achievement\*.java src\minecraft\net\minecraft\client\gui\inventory\*.java src\minecraft\net\minecraft\client\gui\stream\*.java src\minecraft\net\minecraft\client\main\*.java src\minecraft\net\minecraft\client\model\*.java src\minecraft\net\minecraft\client\multiplayer\*.java src\minecraft\net\minecraft\client\network\*.java src\minecraft\net\minecraft\client\particle\*.java src\minecraft\net\minecraft\client\renderer\*.java src\minecraft\net\minecraft\client\renderer\culling\*.java src\minecraft\net\minecraft\client\renderer\entity\*.java src\minecraft\net\minecraft\client\renderer\texture\*.java src\minecraft\net\minecraft\client\renderer\tileentity\*.java src\minecraft\net\minecraft\client\resources\*.java src\minecraft\net\minecraft\client\resources\data\*.java src\minecraft\net\minecraft\client\settings\*.java src\minecraft\net\minecraft\client\shader\*.java src\minecraft\net\minecraft\client\stream\*.java src\minecraft\net\minecraft\client\util\*.java src\minecraft\net\minecraft\command\*.java src\minecraft\net\minecraft\command\server\*.java src\minecraft\net\minecraft\crash\*.java src\minecraft\net\minecraft\creativetab\*.java src\minecraft\net\minecraft\dispenser\*.java src\minecraft\net\minecraft\enchantment\*.java src\minecraft\net\minecraft\entity\*.java src\minecraft\net\minecraft\entity\ai\*.java src\minecraft\net\minecraft\entity\ai\attributes\*.java src\minecraft\net\minecraft\entity\boss\*.java src\minecraft\net\minecraft\entity\effect\*.java src\minecraft\net\minecraft\entity\item\*.java src\minecraft\net\minecraft\entity\monster\*.java src\minecraft\net\minecraft\entity\passive\*.java src\minecraft\net\minecraft\entity\player\*.java src\minecraft\net\minecraft\entity\projectile\*.java src\minecraft\net\minecraft\event\*.java src\minecraft\net\minecraft\init\*.java src\minecraft\net\minecraft\inventory\*.java src\minecraft\net\minecraft\item\*.java src\minecraft\net\minecraft\item\crafting\*.java src\minecraft\net\minecraft\nbt\*.java src\minecraft\net\minecraft\network\*.java src\minecraft\net\minecraft\network\handshake\*.java src\minecraft\net\minecraft\network\handshake\client\*.java src\minecraft\net\minecraft\network\login\*.java src\minecraft\net\minecraft\network\login\client\*.java src\minecraft\net\minecraft\network\login\server\*.java src\minecraft\net\minecraft\network\play\*.java src\minecraft\net\minecraft\network\play\client\*.java src\minecraft\net\minecraft\network\play\server\*.java src\minecraft\net\minecraft\network\rcon\*.java src\minecraft\net\minecraft\network\status\*.java src\minecraft\net\minecraft\network\status\client\*.java src\minecraft\net\minecraft\network\status\server\*.java src\minecraft\net\minecraft\pathfinding\*.java src\minecraft\net\minecraft\potion\*.java src\minecraft\net\minecraft\profiler\*.java src\minecraft\net\minecraft\realms\*.java src\minecraft\net\minecraft\scoreboard\*.java src\minecraft\net\minecraft\server\*.java src\minecraft\net\minecraft\server\gui\*.java src\minecraft\net\minecraft\server\integrated\*.java src\minecraft\net\minecraft\server\management\*.java src\minecraft\net\minecraft\server\network\*.java src\minecraft\net\minecraft\stats\*.java src\minecraft\net\minecraft\tileentity\*.java src\minecraft\net\minecraft\util\*.java src\minecraft\net\minecraft\village\*.java src\minecraft\net\minecraft\world\*.java src\minecraft\net\minecraft\world\biome\*.java src\minecraft\net\minecraft\world\chunk\*.java src\minecraft\net\minecraft\world\chunk\storage\*.java src\minecraft\net\minecraft\world\demo\*.java src\minecraft\net\minecraft\world\gen\*.java src\minecraft\net\minecraft\world\gen\feature\*.java src\minecraft\net\minecraft\world\gen\layer\*.java src\minecraft\net\minecraft\world\gen\structure\*.java src\minecraft\net\minecraft\world\storage\*.java' failed : 1
+01:04:35 - 
+01:04:35 - == ERRORS FOUND in SCALA CODE ==
+01:04:35 - 
+01:04:35 -  === Your scala version is out of date, update to at least 2.10.0 ===
+01:04:35 - bad option '-target:jvm-1.6' was ignored
+01:04:35 - [31m[31m-- Error: src\minecraft\net\minecraft\client\renderer\EntitySorter.java:6:13 ---[0m[0m
+01:04:35 - [31m6 |[0mpublic [33mclass[0m EntitySorter implements Comparator
+01:04:35 - [31m[31m  |[0m             ^[0m
+01:04:35 - 
+01:04:35 - [31m  |[0mbad parameter reference EntitySorter.this.T at typer
+01:04:35 - [31m  |[0mthe parameter is [33mtype[0m [35mT[0m in [33mtrait[0m [35mComparator[0m but the prefix (EntitySorter.this : net.minecraft.client.renderer.EntitySorter)
+01:04:35 - [31m  |[0mdoes not define any corresponding arguments.
+01:04:35 - [31m  |[0midx = 0, args = ,
+01:04:35 - [31m  |[0mconstraint =  uninstantiated variables:
+01:04:35 - [31m  |[0m constrained types:
+01:04:35 - [31m  |[0m bounds:
+01:04:35 - [31m  |[0m ordering:
+01:04:35 - [31m  |[0m co-deps:
+01:04:35 - [31m  |[0m contra-deps:
+01:04:35 -   exception occurred while checkingJava src\minecraft\net\minecraft\client\renderer\EntitySorter.java
+01:04:35 -   An unhandled exception was thrown in the compiler.
+01:04:35 -   Please file a crash report here:
+01:04:35 -   https://github.com/scala/scala3/issues/new/choose
+01:04:35 -   For non-enriched exceptions, compile with -Xno-enrich-error-messages.
+01:04:35 -      while compiling: src\minecraft\net\minecraft\client\renderer\EntitySorter.java
+01:04:35 -         during phase: typer
+01:04:35 -                 mode: Mode(ImplicitsEnabled)
+01:04:35 -      library version: version 2.13.15
+01:04:35 -     compiler version: version 3.6.1
+01:04:35 -             settings: -classpath jars\versions\1.7.10\1.7.10.jar;lib;lib\*;lib;lib\*;jars\bin\minecraft.jar;jars\bin\jinput.jar;jars\bin\lwjgl.jar;jars\bin\lwjgl_util.jar;jars\libraries\com\mojang\netty\1.8.8\netty-1.8.8.jar;jars\libraries\com\mojang\realms\1.3.5\realms-1.3.5.jar;jars\libraries\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;jars\libraries\org\apache\httpcomponents\httpclient\4.3.3\httpclient-4.3.3.jar;jars\libraries\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;jars\libraries\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;jars\libraries\java3d\vecmath\1.3.1\vecmath-1.3.1.jar;jars\libraries\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;jars\libraries\com\ibm\icu\icu4j-core-mojang\51.2\icu4j-core-mojang-51.2.jar;jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;jars\libraries\io\netty\netty-all\4.0.10.Final\netty-all-4.0.10.Final.jar;jars\libraries\com\google\guava\guava\15.0\guava-15.0.jar;jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;jars\libraries\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;jars\libraries\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar;jars\libraries\com\mojang\authlib\1.5.21\authlib-1.5.21.jar;jars\libraries\org\apache\logging\log4j\log4j-api\2.0-beta9\log4j-api-2.0-beta9.jar;jars\libraries\org\apache\logging\log4j\log4j-core\2.0-beta9\log4j-core-2.0-beta9.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.1\lwjgl-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.1\lwjgl_util-2.9.1.jar;jars\libraries\org\lwjgl\lwjgl\lwjgl-platform\2.9.1\lwjgl-platform-2.9.1-natives-windows.jar;jars\libraries\net\java\jinput\jinput-platform\2.0.5\jinput-platform-2.0.5-natives-windows.jar;jars\libraries\tv\twitch\twitch\5.16\twitch-5.16.jar;jars\libraries\tv\twitch\twitch-platform\5.16\twitch-platform-5.16-natives-windows-64.jar;jars\libraries\tv\twitch\twitch-external-platform\4.5\twitch-external-platform-4.5-natives-windows-64.jar -d bin\minecraft -deprecation true -sourcepath src\minecraft
+01:04:35 - Exception in thread "main" dotty.tools.dotc.ast.Trees$UnAssignedTypeException: type of TypeTree is not assigned
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Tree.tpe(Trees.scala:74)
+01:04:35 - 	at dotty.tools.dotc.typer.Checking$.checkAppliedTypesIn(Checking.scala:166)
+01:04:35 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:15)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1753)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:35 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1760)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:35 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1757)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:35 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1665)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1667)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1766)
+01:04:35 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:35 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:35 - 	at dotty.tools.dotc.typer.JavaChecks$.check(JavaChecks.scala:25)
+01:04:35 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck$$anonfun$1(TyperPhase.scala:58)
+01:04:35 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:35 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:35 - 	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:507)
+01:04:35 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck(TyperPhase.scala:59)
+01:04:35 - 	at dotty.tools.dotc.typer.TyperPhase.$anonfun$6(TyperPhase.scala:108)
+01:04:35 - 	at scala.collection.Iterator$$anon$6.hasNext(Iterator.scala:479)
+01:04:35 - 	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+01:04:35 - 	at scala.collection.immutable.List.prependedAll(List.scala:155)
+01:04:35 - 	at scala.collection.immutable.List$.from(List.scala:685)
+01:04:35 - 	at scala.collection.immutable.List$.from(List.scala:682)
+01:04:35 - 	at scala.collection.IterableOps$WithFilter.map(Iterable.scala:900)
+01:04:35 - 	at dotty.tools.dotc.typer.TyperPhase.runOn(TyperPhase.scala:107)
+01:04:35 - 	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:343)
+01:04:35 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:35 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:35 - 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+01:04:35 - 	at dotty.tools.dotc.Run.runPhases$1(Run.scala:336)
+01:04:35 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:384)
+01:04:35 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:396)
+01:04:35 - 	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:69)
+01:04:35 - 	at dotty.tools.dotc.Run.compileUnits(Run.scala:396)
+01:04:35 - 	at dotty.tools.dotc.Run.compileSources(Run.scala:282)
+01:04:35 - 	at dotty.tools.dotc.Run.compile(Run.scala:267)
+01:04:35 - 	at dotty.tools.dotc.Driver.doCompile(Driver.scala:37)
+01:04:35 - 	at dotty.tools.dotc.Driver.process(Driver.scala:201)
+01:04:35 - 	at dotty.tools.dotc.Driver.process(Driver.scala:169)
+01:04:35 - 	at dotty.tools.dotc.Driver.process(Driver.scala:181)
+01:04:35 - 	at dotty.tools.dotc.Driver.main(Driver.scala:211)
+01:04:35 - 	at dotty.tools.MainGenericCompiler$.run$1(MainGenericCompiler.scala:162)
+01:04:35 - 	at dotty.tools.MainGenericCompiler$.main(MainGenericCompiler.scala:186)
+01:04:35 - 	at dotty.tools.MainGenericCompiler.main(MainGenericCompiler.scala)
+01:04:35 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+01:04:35 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+01:04:35 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+01:04:35 - 	at java.lang.reflect.Method.invoke(Method.java:498)
+01:04:35 - 	at coursier.bootstrap.launcher.a.a(Unknown Source)
+01:04:35 - 	at coursier.bootstrap.launcher.Launcher.main(Unknown Source)
+01:04:35 - ================================
+01:04:35 - 
+01:04:40 - '"scalac.bat" -encoding UTF-8 -deprecation -target:jvm-1.6 -classpath "lib;lib\*;jars\minecraft_server.jar" -sourcepath src\minecraft_server -d bin\minecraft_server src\minecraft_server\net\minecraft\block\*.java src\minecraft_server\net\minecraft\block\material\*.java src\minecraft_server\net\minecraft\command\*.java src\minecraft_server\net\minecraft\command\server\*.java src\minecraft_server\net\minecraft\crash\*.java src\minecraft_server\net\minecraft\creativetab\*.java src\minecraft_server\net\minecraft\dispenser\*.java src\minecraft_server\net\minecraft\enchantment\*.java src\minecraft_server\net\minecraft\entity\*.java src\minecraft_server\net\minecraft\entity\ai\*.java src\minecraft_server\net\minecraft\entity\ai\attributes\*.java src\minecraft_server\net\minecraft\entity\boss\*.java src\minecraft_server\net\minecraft\entity\effect\*.java src\minecraft_server\net\minecraft\entity\item\*.java src\minecraft_server\net\minecraft\entity\monster\*.java src\minecraft_server\net\minecraft\entity\passive\*.java src\minecraft_server\net\minecraft\entity\player\*.java src\minecraft_server\net\minecraft\entity\projectile\*.java src\minecraft_server\net\minecraft\event\*.java src\minecraft_server\net\minecraft\init\*.java src\minecraft_server\net\minecraft\inventory\*.java src\minecraft_server\net\minecraft\item\*.java src\minecraft_server\net\minecraft\item\crafting\*.java src\minecraft_server\net\minecraft\nbt\*.java src\minecraft_server\net\minecraft\network\*.java src\minecraft_server\net\minecraft\network\handshake\*.java src\minecraft_server\net\minecraft\network\handshake\client\*.java src\minecraft_server\net\minecraft\network\login\*.java src\minecraft_server\net\minecraft\network\login\client\*.java src\minecraft_server\net\minecraft\network\login\server\*.java src\minecraft_server\net\minecraft\network\play\*.java src\minecraft_server\net\minecraft\network\play\client\*.java src\minecraft_server\net\minecraft\network\play\server\*.java src\minecraft_server\net\minecraft\network\rcon\*.java src\minecraft_server\net\minecraft\network\status\*.java src\minecraft_server\net\minecraft\network\status\client\*.java src\minecraft_server\net\minecraft\network\status\server\*.java src\minecraft_server\net\minecraft\pathfinding\*.java src\minecraft_server\net\minecraft\potion\*.java src\minecraft_server\net\minecraft\profiler\*.java src\minecraft_server\net\minecraft\scoreboard\*.java src\minecraft_server\net\minecraft\server\*.java src\minecraft_server\net\minecraft\server\dedicated\*.java src\minecraft_server\net\minecraft\server\gui\*.java src\minecraft_server\net\minecraft\server\management\*.java src\minecraft_server\net\minecraft\server\network\*.java src\minecraft_server\net\minecraft\stats\*.java src\minecraft_server\net\minecraft\tileentity\*.java src\minecraft_server\net\minecraft\util\*.java src\minecraft_server\net\minecraft\village\*.java src\minecraft_server\net\minecraft\world\*.java src\minecraft_server\net\minecraft\world\biome\*.java src\minecraft_server\net\minecraft\world\chunk\*.java src\minecraft_server\net\minecraft\world\chunk\storage\*.java src\minecraft_server\net\minecraft\world\demo\*.java src\minecraft_server\net\minecraft\world\gen\*.java src\minecraft_server\net\minecraft\world\gen\feature\*.java src\minecraft_server\net\minecraft\world\gen\layer\*.java src\minecraft_server\net\minecraft\world\gen\structure\*.java src\minecraft_server\net\minecraft\world\storage\*.java' failed : 1
+01:04:40 - 
+01:04:40 - == ERRORS FOUND in SCALA CODE ==
+01:04:40 - 
+01:04:40 -  === Your scala version is out of date, update to at least 2.10.0 ===
+01:04:40 - bad option '-target:jvm-1.6' was ignored
+01:04:40 - [31m[31m-- Error: src\minecraft_server\net\minecraft\command\CommandBase.java:17:22 ----[0m[0m
+01:04:40 - [31m17 |[0mpublic [33mabstract[0m [33mclass[0m CommandBase implements ICommand
+01:04:40 - [31m[31m   |[0m                      ^[0m
+01:04:40 - 
+01:04:40 - [31m   |[0mbad parameter reference CommandBase.this.T at typer
+01:04:40 - [31m   |[0mthe parameter is [33mtype[0m [35mT[0m in [33mtrait[0m [35mComparable[0m but the prefix (CommandBase.this : net.minecraft.command.CommandBase)
+01:04:40 - [31m   |[0mdoes not define any corresponding arguments.
+01:04:40 - [31m   |[0midx = 0, args = ,
+01:04:40 - [31m   |[0mconstraint =  uninstantiated variables:
+01:04:40 - [31m   |[0m constrained types:
+01:04:40 - [31m   |[0m bounds:
+01:04:40 - [31m   |[0m ordering:
+01:04:40 - [31m   |[0m co-deps:
+01:04:40 - [31m   |[0m contra-deps:
+01:04:40 -   exception occurred while checkingJava src\minecraft_server\net\minecraft\command\CommandBase.java
+01:04:40 -   An unhandled exception was thrown in the compiler.
+01:04:40 -   Please file a crash report here:
+01:04:40 -   https://github.com/scala/scala3/issues/new/choose
+01:04:40 -   For non-enriched exceptions, compile with -Xno-enrich-error-messages.
+01:04:40 -      while compiling: src\minecraft_server\net\minecraft\command\CommandBase.java
+01:04:40 -         during phase: typer
+01:04:40 -                 mode: Mode(ImplicitsEnabled)
+01:04:40 -      library version: version 2.13.15
+01:04:40 -     compiler version: version 3.6.1
+01:04:40 -             settings: -classpath lib;lib\*;jars\minecraft_server.jar -d bin\minecraft_server -deprecation true -sourcepath src\minecraft_server
+01:04:40 - Exception in thread "main" dotty.tools.dotc.ast.Trees$UnAssignedTypeException: type of TypeTree is not assigned
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Tree.tpe(Trees.scala:74)
+01:04:40 - 	at dotty.tools.dotc.typer.Checking$.checkAppliedTypesIn(Checking.scala:166)
+01:04:40 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:15)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1753)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:40 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1760)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:40 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1757)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:40 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1801)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1665)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1667)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1766)
+01:04:40 - 	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1802)
+01:04:40 - 	at dotty.tools.dotc.typer.JavaChecks$AppliedTypeChecker$.traverse(JavaChecks.scala:19)
+01:04:40 - 	at dotty.tools.dotc.typer.JavaChecks$.check(JavaChecks.scala:25)
+01:04:40 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck$$anonfun$1(TyperPhase.scala:58)
+01:04:40 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:40 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:40 - 	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:507)
+01:04:40 - 	at dotty.tools.dotc.typer.TyperPhase.javaCheck(TyperPhase.scala:59)
+01:04:40 - 	at dotty.tools.dotc.typer.TyperPhase.$anonfun$6(TyperPhase.scala:108)
+01:04:40 - 	at scala.collection.Iterator$$anon$6.hasNext(Iterator.scala:479)
+01:04:40 - 	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+01:04:40 - 	at scala.collection.immutable.List.prependedAll(List.scala:155)
+01:04:40 - 	at scala.collection.immutable.List$.from(List.scala:685)
+01:04:40 - 	at scala.collection.immutable.List$.from(List.scala:682)
+01:04:40 - 	at scala.collection.IterableOps$WithFilter.map(Iterable.scala:900)
+01:04:40 - 	at dotty.tools.dotc.typer.TyperPhase.runOn(TyperPhase.scala:107)
+01:04:40 - 	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:343)
+01:04:40 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+01:04:40 - 	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+01:04:40 - 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+01:04:40 - 	at dotty.tools.dotc.Run.runPhases$1(Run.scala:336)
+01:04:40 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:384)
+01:04:40 - 	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:396)
+01:04:40 - 	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:69)
+01:04:40 - 	at dotty.tools.dotc.Run.compileUnits(Run.scala:396)
+01:04:40 - 	at dotty.tools.dotc.Run.compileSources(Run.scala:282)
+01:04:40 - 	at dotty.tools.dotc.Run.compile(Run.scala:267)
+01:04:40 - 	at dotty.tools.dotc.Driver.doCompile(Driver.scala:37)
+01:04:40 - 	at dotty.tools.dotc.Driver.process(Driver.scala:201)
+01:04:40 - 	at dotty.tools.dotc.Driver.process(Driver.scala:169)
+01:04:40 - 	at dotty.tools.dotc.Driver.process(Driver.scala:181)
+01:04:40 - 	at dotty.tools.dotc.Driver.main(Driver.scala:211)
+01:04:40 - 	at dotty.tools.MainGenericCompiler$.run$1(MainGenericCompiler.scala:162)
+01:04:40 - 	at dotty.tools.MainGenericCompiler$.main(MainGenericCompiler.scala:186)
+01:04:40 - 	at dotty.tools.MainGenericCompiler.main(MainGenericCompiler.scala)
+01:04:40 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+01:04:40 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+01:04:40 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+01:04:40 - 	at java.lang.reflect.Method.invoke(Method.java:498)
+01:04:40 - 	at coursier.bootstrap.launcher.a.a(Unknown Source)
+01:04:40 - 	at coursier.bootstrap.launcher.Launcher.main(Unknown Source)
+01:04:40 - ================================
+01:04:40 - 
+01:05:22 - FATAL ERROR
+Traceback (most recent call last):
+  File "runtime/recompile.py", line 29, in recompile
+    commands = Commands(conffile, verify=True)
+  File "H:\CodeProjects\AllMCVersionsMCP\1.7.10\runtime\commands.py", line 208, in __init__
+    self.readcommands(verify, no_patch=no_patch)
+  File "H:\CodeProjects\AllMCVersionsMCP\1.7.10\runtime\commands.py", line 397, in readcommands
+    self.cmdrecompscala = self.config.get('COMMANDS', 'CmdRecompScala', raw=1) % self.cmdscalac
+  File "C:\Users\Wyatt\AppData\Local\Programs\Python\pypy2.7-v7.3.17-win64\lib-python\2.7\ConfigParser.py", line 618, in get
+    raise NoOptionError(option, section)
+NoOptionError: No option 'cmdrecompscala' in section: 'COMMANDS'
+01:05:45 - FATAL ERROR
+Traceback (most recent call last):
+  File "runtime/recompile.py", line 29, in recompile
+    commands = Commands(conffile, verify=True)
+  File "H:\CodeProjects\AllMCVersionsMCP\1.7.10\runtime\commands.py", line 208, in __init__
+    self.readcommands(verify, no_patch=no_patch)
+  File "H:\CodeProjects\AllMCVersionsMCP\1.7.10\runtime\commands.py", line 397, in readcommands
+    self.cmdrecompscala = self.config.get('COMMANDS', 'CmdRecompScala', raw=1) % self.cmdscalac
+TypeError: not all arguments converted during string formatting
+01:06:01 - FATAL ERROR
+Traceback (most recent call last):
+  File "runtime/recompile.py", line 41, in recompile
+    recompile_side(commands, CLIENT)
+  File "H:\CodeProjects\AllMCVersionsMCP\1.7.10\runtime\mcp.py", line 136, in recompile_side
+    commands.recompile(side)
+  File "H:\CodeProjects\AllMCVersionsMCP\1.7.10\runtime\commands.py", line 1554, in recompile
+    self.runcmd(forkcmd, log_file=pathlog[side])
+  File "H:\CodeProjects\AllMCVersionsMCP\1.7.10\runtime\commands.py", line 1612, in runcmd
+    process = subprocess.Popen(forklist, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, bufsize=-1)
+  File "C:\Users\Wyatt\AppData\Local\Programs\Python\pypy2.7-v7.3.17-win64\lib-python\2.7\subprocess.py", line 409, in __init__
+    errread, errwrite)
+  File "C:\Users\Wyatt\AppData\Local\Programs\Python\pypy2.7-v7.3.17-win64\lib-python\2.7\subprocess.py", line 674, in _execute_child
+    startupinfo)
+  File "C:\Users\Wyatt\AppData\Local\Programs\Python\pypy2.7-v7.3.17-win64\lib_pypy\_subprocess.py", line 123, in CreateProcess
+    raise _WinError()
+  File "C:\Users\Wyatt\AppData\Local\Programs\Python\pypy2.7-v7.3.17-win64\lib_pypy\_subprocess.py", line 23, in _WinError
+    raise WindowsError(code, message)
+WindowsError: [Error 2] The system cannot find the file specified

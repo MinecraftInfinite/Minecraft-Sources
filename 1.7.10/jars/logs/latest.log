@@ -1,0 +1,44 @@
+[03:10:39] [main/ERROR]: Can't find the resource index file: assets\indexes\1.7.10.json
+[03:10:39] [main/INFO]: Setting user: Player304
+[03:10:39] [main/INFO]: (Session ID is token:0:Player304)
+[03:10:39] [Client thread/INFO]: LWJGL Version: 2.9.1
+[03:10:40] [Client thread/ERROR]: Couldn't initialize twitch stream
+[03:10:40] [Client thread/INFO]: Reloading ResourceManager: Default
+[03:10:40] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[03:10:40] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[03:10:40] [Sound Library Loader/INFO]: Sound engine started
+[03:10:41] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[03:10:42] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[03:10:42] [Server thread/INFO]: Generating keypair
+[03:10:42] [Server thread/INFO]: Preparing start region for level 0
+[03:10:43] [Server thread/INFO]: Preparing spawn area: 42%
+[03:10:44] [Server thread/INFO]: Changing view distance to 12, from 10
+[03:10:44] [Server thread/INFO]: Player304[local:E:8bb3edcd] logged in with entity id 66 at (584.5, 67.0, 156.5)
+[03:10:44] [Server thread/INFO]: Player304 joined the game
+[03:10:44] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:mob.bat.takeoff
+[03:10:45] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:minecart.base
+[03:10:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.sand
+[03:10:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.sand
+[03:10:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.sand
+[03:10:46] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:dig.sand
+[03:10:49] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.game.creative
+[03:10:52] [Server thread/INFO]: Player304 has just earned the achievement [Taking Inventory]
+[03:10:52] [Client thread/INFO]: [CHAT] Player304 has just earned the achievement [Taking Inventory]
+[03:10:55] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:mob.bat.takeoff
+[03:10:58] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:mob.bat.takeoff
+[03:10:58] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:mob.bat.takeoff
+[03:10:59] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.sand
+[03:10:59] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:random.pop
+[03:11:04] [Server thread/INFO]: Saving and pausing game...
+[03:11:04] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[03:11:04] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[03:11:04] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[03:11:05] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[03:11:05] [Server thread/INFO]: Stopping server
+[03:11:05] [Server thread/INFO]: Saving players
+[03:11:05] [Server thread/INFO]: Saving worlds
+[03:11:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[03:11:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[03:11:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[03:11:05] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[03:11:05] [Client thread/INFO]: Stopping!

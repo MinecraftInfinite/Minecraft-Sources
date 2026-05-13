@@ -1,0 +1,95 @@
+package net.minecraft.command.impl;
+
+import com.google.common.collect.Lists;
+import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.arguments.IntegerArgumentType;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.mojang.brigadier.builder.RequiredArgumentBuilder;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.brigadier.exceptions.Dynamic2CommandExceptionType;
+import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
+import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
+import java.util.Collection;
+import java.util.List;
+import net.minecraft.command.CommandSource;
+import net.minecraft.command.Commands;
+import net.minecraft.command.arguments.BlockPosArgument;
+import net.minecraft.command.arguments.EntityArgument;
+import net.minecraft.command.arguments.ItemArgument;
+import net.minecraft.command.arguments.SlotArgument;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentTranslation;
+
+public class ReplaceItemCommand {
+   private static final SimpleCommandExceptionType BLOCK_FAILED_EXCEPTION = new SimpleCommandExceptionType(new TextComponentTranslation("commands.replaceitem.block.failed", new Object[0]));
+   private static final DynamicCommandExceptionType INAPPLICABLE_SLOT_EXCEPTION = new DynamicCommandExceptionType((p_211409_0_) -> {
+      return new TextComponentTranslation("commands.replaceitem.slot.inapplicable", new Object[]{p_211409_0_});
+   });
+   private static final Dynamic2CommandExceptionType ENTITY_FAILED_EXCEPTION = new Dynamic2CommandExceptionType((p_211411_0_, p_211411_1_) -> {
+      return new TextComponentTranslation("commands.replaceitem.entity.failed", new Object[]{p_211411_0_, p_211411_1_});
+   });
+
+   public static void register(CommandDispatcher<CommandSource> dispatcher) {
+      dispatcher.register((LiteralArgumentBuilder)((LiteralArgumentBuilder)((LiteralArgumentBuilder)Commands.literal("replaceitem").requires((p_198607_0_) -> {
+         return p_198607_0_.hasPermissionLevel(2);
+      })).then(Commands.literal("block").then(Commands.argument("pos", BlockPosArgument.blockPos()).then(Commands.argument("slot", SlotArgument.slot()).then(((RequiredArgumentBuilder)Commands.argument("item", ItemArgument.item()).executes((p_198601_0_) -> {
+         return replaceItemBlock((CommandSource)p_198601_0_.getSource(), BlockPosArgument.getLoadedBlockPos(p_198601_0_, "pos"), SlotArgument.getSlot(p_198601_0_, "slot"), ItemArgument.getItem(p_198601_0_, "item").createStack(1, false));
+      })).then(Commands.argument("count", IntegerArgumentType.integer(1, 64)).executes((p_198605_0_) -> {
+         return replaceItemBlock((CommandSource)p_198605_0_.getSource(), BlockPosArgument.getLoadedBlockPos(p_198605_0_, "pos"), SlotArgument.getSlot(p_198605_0_, "slot"), ItemArgument.getItem(p_198605_0_, "item").createStack(IntegerArgumentType.getInteger(p_198605_0_, "count"), true));
+      }))))))).then(Commands.literal("entity").then(Commands.argument("targets", EntityArgument.entities()).then(Commands.argument("slot", SlotArgument.slot()).then(((RequiredArgumentBuilder)Commands.argument("item", ItemArgument.item()).executes((p_198600_0_) -> {
+         return replaceItemEntities((CommandSource)p_198600_0_.getSource(), EntityArgument.getEntities(p_198600_0_, "targets"), SlotArgument.getSlot(p_198600_0_, "slot"), ItemArgument.getItem(p_198600_0_, "item").createStack(1, false));
+      })).then(Commands.argument("count", IntegerArgumentType.integer(1, 64)).executes((p_198606_0_) -> {
+         return replaceItemEntities((CommandSource)p_198606_0_.getSource(), EntityArgument.getEntities(p_198606_0_, "targets"), SlotArgument.getSlot(p_198606_0_, "slot"), ItemArgument.getItem(p_198606_0_, "item").createStack(IntegerArgumentType.getInteger(p_198606_0_, "count"), true));
+      })))))));
+   }
+
+   private static int replaceItemBlock(CommandSource source, BlockPos pos, int slotIn, ItemStack newStack) throws CommandSyntaxException {
+      TileEntity tileentity = source.getWorld().getTileEntity(pos);
+      if (!(tileentity instanceof IInventory)) {
+         throw BLOCK_FAILED_EXCEPTION.create();
+      } else {
+         IInventory iinventory = (IInventory)tileentity;
+         if (slotIn >= 0 && slotIn < iinventory.getSizeInventory()) {
+            iinventory.setInventorySlotContents(slotIn, newStack);
+            source.sendFeedback(new TextComponentTranslation("commands.replaceitem.block.success", new Object[]{pos.getX(), pos.getY(), pos.getZ(), newStack.getTextComponent()}), true);
+            return 1;
+         } else {
+            throw INAPPLICABLE_SLOT_EXCEPTION.create(slotIn);
+         }
+      }
+   }
+
+   private static int replaceItemEntities(CommandSource source, Collection<? extends Entity> targets, int slotIn, ItemStack newStack) throws CommandSyntaxException {
+      List<Entity> list = Lists.<Entity>newArrayListWithCapacity(targets.size());
+
+      for(Entity entity : targets) {
+         if (entity instanceof EntityPlayerMP) {
+            ((EntityPlayerMP)entity).inventoryContainer.detectAndSendChanges();
+         }
+
+         if (entity.replaceItemInInventory(slotIn, newStack.copy())) {
+            list.add(entity);
+            if (entity instanceof EntityPlayerMP) {
+               ((EntityPlayerMP)entity).inventoryContainer.detectAndSendChanges();
+            }
+         }
+      }
+
+      if (list.isEmpty()) {
+         throw ENTITY_FAILED_EXCEPTION.create(newStack.getTextComponent(), slotIn);
+      } else {
+         if (list.size() == 1) {
+            source.sendFeedback(new TextComponentTranslation("commands.replaceitem.entity.success.single", new Object[]{((Entity)list.iterator().next()).getDisplayName(), newStack.getTextComponent()}), true);
+         } else {
+            source.sendFeedback(new TextComponentTranslation("commands.replaceitem.entity.success.multiple", new Object[]{list.size(), newStack.getTextComponent()}), true);
+         }
+
+         return list.size();
+      }
+   }
+}

@@ -1,0 +1,18 @@
+package net.minecraft.block;
+
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class BlockHay extends BlockRotatedPillar {
+   public BlockHay(Block.Properties properties) {
+      super(properties);
+      this.setDefaultState((IBlockState)(this.stateContainer.getBaseState()).with(AXIS, EnumFacing.Axis.Y));
+   }
+
+   public void onFallenUpon(World worldIn, BlockPos pos, Entity entityIn, float fallDistance) {
+      entityIn.fall(fallDistance, 0.2F);
+   }
+}
